@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.onixys.learning</groupId>
+    <artifactId>java-design-patterns</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>Java :: Design Patterns</name>
+    <description>Java Design Patterns</description>
+    <packaging>pom</packaging>
+
+    <!-- =============================================================================== -->
+    <!--       P R O P E R T I E S                                                       -->
+    <!-- =============================================================================== -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!--    J A V A    V E R S I O N                                                   -->
+        <!-- ............................................................................. -->
+        <java.version>11</java.version>
+
+        <!--       P L U G I N S    V E R S I O N      -->
+        <!-- ............................................................................. -->
+        <maven-plugin-compiler.version>3.8.0</maven-plugin-compiler.version>
+    </properties>
+
+    <!-- =============================================================================== -->
+    <!--       M O D U L E S                                                             -->
+    <!-- =============================================================================== -->
+    <modules>
+        <module>java-design-patterns-behavioral</module>
+        <module>java-design-patterns-creational</module>
+        <module>java-design-patterns-structural</module>
+    </modules>
+
+    <!-- =============================================================================== -->
+    <!--       B U I D                                                                   -->
+    <!-- =============================================================================== -->
+    <build>
+        <plugins>
+            <!-- ======================================================= -->
+            <!--       M A V E N    C O M P I L E R    P L U G I N       -->
+            <!-- ======================================================= -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-plugin-compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <forceJavacCompilerUse>true</forceJavacCompilerUse>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
