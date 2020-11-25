@@ -1,11 +1,13 @@
 package com.onixys.learning.dpc.abstractfactory;
 
 /**
- * Ember CPU
+ * Product Category
  *
  * @author Hamid Kianzad
  * @version {version}
  * @since 1.0.0
  */
-class EmberCPU extends CPU {
+public enum ProductCategory {
+    CATEGORY_X,
+    CATEGORY_Y
 }

@@ -1,12 +1,14 @@
 package com.onixys.learning.dpc.factorymethod;
 
 /**
- * Image Reader
+ * ProductType
  *
  * @author Hamid Kianzad
  * @version {version}
  * @since 1.0.0
  */
-public interface ImageReader {
-    DecodedImage getDecodeImage();
+public enum ProductType {
+    PRODUCT_A,
+    PRODUCT_B,
+    PRODUCT_C
 }
