@@ -15,4 +15,8 @@ public class Singleton {
 
         return instance;
     }
+
+    public void apply() {
+        System.out.println("Job is done.");
+    }
 }

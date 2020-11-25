@@ -1,4 +1,10 @@
-package com.onixys.learning.dpc.factorymethod;
+package com.onixys.learning.dpc.factorymethod.factory;
+
+import com.onixys.learning.dpc.factorymethod.configuration.ProductType;
+import com.onixys.learning.dpc.factorymethod.product.Product;
+import com.onixys.learning.dpc.factorymethod.product.ProductA;
+import com.onixys.learning.dpc.factorymethod.product.ProductB;
+import com.onixys.learning.dpc.factorymethod.product.ProductC;
 
 /**
  * Product Factory

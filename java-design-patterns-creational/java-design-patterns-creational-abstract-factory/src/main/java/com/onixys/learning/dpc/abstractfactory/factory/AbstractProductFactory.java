@@ -1,6 +1,6 @@
 package com.onixys.learning.dpc.abstractfactory.factory;
 
-import com.onixys.learning.dpc.abstractfactory.ProductType;
+import com.onixys.learning.dpc.abstractfactory.configuration.ProductType;
 import com.onixys.learning.dpc.abstractfactory.product.Product;
 
 /**

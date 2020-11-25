@@ -1,5 +1,9 @@
 package com.onixys.learning.dpc.factorymethod;
 
+import com.onixys.learning.dpc.factorymethod.configuration.ProductType;
+import com.onixys.learning.dpc.factorymethod.factory.ProductFactory;
+import com.onixys.learning.dpc.factorymethod.product.Product;
+
 /**
  * Demo
  *

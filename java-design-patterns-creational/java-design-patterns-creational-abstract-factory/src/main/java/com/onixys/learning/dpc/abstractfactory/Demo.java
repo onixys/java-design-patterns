@@ -1,5 +1,7 @@
 package com.onixys.learning.dpc.abstractfactory;
 
+import com.onixys.learning.dpc.abstractfactory.configuration.ProductCategory;
+import com.onixys.learning.dpc.abstractfactory.configuration.ProductType;
 import com.onixys.learning.dpc.abstractfactory.factory.AbstractProductFactory;
 import com.onixys.learning.dpc.abstractfactory.factory.FactoryCreator;
 import com.onixys.learning.dpc.abstractfactory.product.Product;

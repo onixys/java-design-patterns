@@ -1,6 +1,6 @@
 package com.onixys.learning.dpc.abstractfactory.factory;
 
-import com.onixys.learning.dpc.abstractfactory.ProductCategory;
+import com.onixys.learning.dpc.abstractfactory.configuration.ProductCategory;
 
 /**
  * Factory Creator

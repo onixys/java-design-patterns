@@ -1,4 +1,4 @@
-package com.onixys.learning.dpc.abstractfactory;
+package com.onixys.learning.dpc.abstractfactory.configuration;
 
 /**
  * Product Category

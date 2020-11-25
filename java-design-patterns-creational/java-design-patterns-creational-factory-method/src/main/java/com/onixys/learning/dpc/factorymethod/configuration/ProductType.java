@@ -1,4 +1,4 @@
-package com.onixys.learning.dpc.factorymethod;
+package com.onixys.learning.dpc.factorymethod.configuration;
 
 /**
  * ProductType
