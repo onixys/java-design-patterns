@@ -32,5 +32,7 @@
         <module>java-design-patterns-creational-abstract-factory</module>
         <module>java-design-patterns-creational-builder</module>
         <module>java-design-patterns-creational-factory-method</module>
+        <module>java-design-patterns-creational-prototype</module>
+        <module>java-design-patterns-creational-singleton</module>
     </modules>
 </project>

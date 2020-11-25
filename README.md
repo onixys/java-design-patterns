@@ -1,4 +1,10 @@
-# java-design-patterns
+# Design Patterns
+
+## Gang Of Four (GOF)
+* Creational: How objects get created
+* Structural: How objects are composed
+* Behavioural: How objects interacts
+
 
 * Creational Design Patterns: These design patterns provide a way to create objects while hiding the creation logic, rather than instantiating objects directly using new operator. This gives program more flexibility in deciding which objects need to be created for a given use case.
     * Factory: Define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate.
