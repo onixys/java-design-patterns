@@ -24,11 +24,11 @@ public class Demo {
         Criteria categoryX = new CriteriaCategoryX();
         Criteria typeA = new CriteriaTypeA();
         Criteria typeB = new CriteriaTypeB();
-        Criteria andCriteria = new AndCriteria(categoryX, typeA);
-        Criteria orCriteria = new OrCriteria(categoryX, typeB);
+        Criteria XAndA = new AndCriteria(categoryX, typeA);
+        Criteria XOrB = new OrCriteria(categoryX, typeB);
 
         System.out.println(categoryX.meet(products));
-        System.out.println(andCriteria.meet(products));
-        System.out.println(orCriteria.meet(products));
+        System.out.println(XAndA.meet(products));
+        System.out.println(XOrB.meet(products));
     }
 }

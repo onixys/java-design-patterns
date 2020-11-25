@@ -31,6 +31,7 @@
     <modules>
         <module>java-design-patterns-structural-adapter</module>
         <module>java-design-patterns-structural-bridge</module>
+        <module>java-design-patterns-structural-composite</module>
         <module>java-design-patterns-structural-filter</module>
     </modules>
 </project>

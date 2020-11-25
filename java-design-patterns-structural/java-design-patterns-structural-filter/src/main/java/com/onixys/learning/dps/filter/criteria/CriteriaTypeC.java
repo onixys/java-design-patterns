@@ -20,7 +20,7 @@ public class CriteriaTypeC implements Criteria {
         List<Product> cProducts = new ArrayList<>();
 
         for (Product product : products) {
-            if(product.category().equals(ProductType.PRODUCT_C)){
+            if(product.type().equals(ProductType.PRODUCT_C)){
                 cProducts.add(product);
             }
         }
