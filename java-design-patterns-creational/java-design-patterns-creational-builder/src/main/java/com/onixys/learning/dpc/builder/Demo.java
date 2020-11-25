@@ -1,13 +1,13 @@
 package com.onixys.learning.dpc.builder;
 
 /**
- * Client
+ * Demo
  *
  * @author Hamid Kianzad
  * @version {version}
  * @since 1.0.0
  */
-public class Client {
+public class Demo {
     public static void main(String[] args) {
         Waiter waiter = new Waiter();
         AbstractPizzaBuilder hawaiianPizzabuilder = new HawaiianPizzaBuilder();

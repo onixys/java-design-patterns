@@ -5,32 +5,29 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>java-design-patterns-structural</artifactId>
+    <artifactId>java-design-patterns-structural-filter</artifactId>
 
-    <name>Java :: Design Patterns :: Structural</name>
-    <description>Java Design Patterns Structural</description>
-    <packaging>pom</packaging>
+    <name>Java :: Design Patterns :: Structural :: Filter</name>
+    <description>Java Design Patterns Structural - Filter</description>
 
     <parent>
         <groupId>com.onixys.learning</groupId>
-        <artifactId>java-design-patterns</artifactId>
+        <artifactId>java-design-patterns-structural</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <!-- =============================================================================== -->
-    <!--       B U I L D                                                                 -->
+    <!--       P R O P E R T I E S                                                       -->
     <!-- =============================================================================== -->
-    <build>
+    <properties>
 
-    </build>
+    </properties>
 
     <!-- =============================================================================== -->
-    <!--       M O D U L E S                                                             -->
+    <!--       D E P E N D E N C I E S                                                   -->
     <!-- =============================================================================== -->
-    <modules>
-        <module>java-design-patterns-structural-adapter</module>
-        <module>java-design-patterns-structural-bridge</module>
-        <module>java-design-patterns-structural-filter</module>
-    </modules>
+    <dependencies>
+
+    </dependencies>
 </project>
