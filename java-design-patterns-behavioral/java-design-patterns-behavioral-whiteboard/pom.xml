@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>java-design-patterns-behavioral-whiteboard</artifactId>
+
+    <name>Java :: Design Patterns :: Behavioral :: Whiteboard</name>
+    <description>Java Design Patterns Behavioral - Whiteboard</description>
+
+    <packaging>bundle</packaging>
+
+    <parent>
+        <groupId>com.onixys.learning</groupId>
+        <artifactId>java-design-patterns-behavioral</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- =============================================================================== -->
+    <!--       P R O P E R T I E S                                                       -->
+    <!-- =============================================================================== -->
+    <properties>
+        <java.version>11</java.version>
+        <vertx.version>3.9.4</vertx.version>
+        <apache.felix>1.12.1</apache.felix>
+        <apache.felix.framework>6.0.3</apache.felix.framework>
+
+        <HikariCP.version>3.4.5</HikariCP.version>
+        <javax.inject>1</javax.inject>
+        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+        <ops4j.pax.url.version>2.6.3</ops4j.pax.url.version>
+        <ops4j.pax.exam.version>4.13.4</ops4j.pax.exam.version>
+        <servicemix.bundles.hsqldb.version>1.8.0.10_2</servicemix.bundles.hsqldb.version>
+        <servicemix.bundles.c3p0.version>0.9.5.5_1</servicemix.bundles.c3p0.version>
+        <slf4j.version>1.7.30</slf4j.version>
+
+        <maven-plugin-bnd-ipojo.version>1.12.1</maven-plugin-bnd-ipojo.version>
+        <maven-plugin-bundle.version>5.1.1</maven-plugin-bundle.version>
+        <maven-plugin-compiler.version>3.8.1</maven-plugin-compiler.version>
+        <maven-plugin-depends.version>1.4.0</maven-plugin-depends.version>
+        <maven-plugin-failsafe.version>2.22.2</maven-plugin-failsafe.version>
+    </properties>
+
+    <!-- =============================================================================== -->
+    <!--       D E P E N D E N C Y    M A N A G E M E N T                                -->
+    <!-- =============================================================================== -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-stack-depchain</artifactId>
+                <version>${vertx.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- =============================================================================== -->
+    <!--       D E P E N D E N C I E S                                                   -->
+    <!-- =============================================================================== -->
+    <dependencies>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-web-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-rx-java2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-jwt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-jdbc-client</artifactId>
+        </dependency>
+
+        <!-- Felix -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.ipojo.annotations</artifactId>
+            <version>${apache.felix}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.ipojo</artifactId>
+            <version>${apache.felix}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.framework</artifactId>
+            <version>${apache.felix.framework}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JSQL Database -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.3.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>${javax.inject}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.url</groupId>
+            <artifactId>pax-url-aether</artifactId>
+            <version>${ops4j.pax.url.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-link-mvn</artifactId>
+            <version>${ops4j.pax.exam.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam</artifactId>
+            <version>${ops4j.pax.exam.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-junit4</artifactId>
+            <version>${ops4j.pax.exam.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-container-native</artifactId>
+            <version>${ops4j.pax.exam.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.c3p0</artifactId>
+            <version>${servicemix.bundles.c3p0.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.servicemix.bundles</groupId>
+            <artifactId>org.apache.servicemix.bundles.hsqldb</artifactId>
+            <version>${servicemix.bundles.hsqldb.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${javax.servlet-api.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${HikariCP.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- BND Maven Plugin Configuration -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>${maven-plugin-bundle.version}</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Private-Package>io.vertx.example.osgi*</Private-Package>
+                        <Bundle-Activator>io.vertx.example.osgi.VertxActivator</Bundle-Activator>
+                        <Export-Package>io.vertx.example.osgi.service</Export-Package>
+                        <_plugin>org.apache.felix.ipojo.bnd.PojoizationPlugin</_plugin>
+                    </instructions>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.felix</groupId>
+                        <artifactId>bnd-ipojo-plugin</artifactId>
+                        <version>${maven-plugin-bnd-ipojo.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-plugin-compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven-plugin-failsafe.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                        <configuration>
+                            <systemProperties>
+                                <project.version>${project.version}</project.version>
+                            </systemProperties>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.servicemix.tooling</groupId>
+                <artifactId>depends-maven-plugin</artifactId>
+                <version>${maven-plugin-depends.version}</version>
+                <executions>
+                    <execution>
+                        <id>generate-depends-file</id>
+                        <goals>
+                            <goal>generate-depends-file</goal>
+                        </goals>
+                        <phase>initialize</phase>
+                        <configuration>
+                            <outputFile>${project.build.directory}/test-classes/META-INF/maven/dependencies.properties</outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

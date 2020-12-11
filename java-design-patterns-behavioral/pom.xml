@@ -31,5 +31,6 @@
     <modules>
         <module>java-design-patterns-behavioral-memento</module>
         <module>java-design-patterns-behavioral-state</module>
+        <module>java-design-patterns-behavioral-whiteboard</module>
     </modules>
 </project>
